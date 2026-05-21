@@ -1,0 +1,20 @@
+[Unit]
+Description=Dose-App Backend
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/opt/dose-app/backend
+ExecStart=/opt/dose-app/venv/bin/python main.py
+Restart=on-failure
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+
+# Environment variables - replace placeholders or use an EnvironmentFile
+EnvironmentFile=/etc/dose-app/env
+
+[Install]
+WantedBy=multi-user.target
