@@ -15,3 +15,5 @@ GOOGLE_CREDENTIALS_JSON = os.environ.get("GOOGLE_CREDENTIALS_JSON", "credentials
 GOOGLE_SHEET_NAME = os.environ.get("GOOGLE_SHEET_NAME", "DoseApp Log")
 
 API_PORT = int(os.environ.get("API_PORT", "5000"))
+
+TIMEZONE = os.environ.get("TIMEZONE", "America/Toronto")

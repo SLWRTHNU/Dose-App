@@ -14,6 +14,7 @@ import sys
 import threading
 from datetime import datetime, timedelta, timezone
 from typing import Optional
+from zoneinfo import ZoneInfo
 
 import config
 import chart
